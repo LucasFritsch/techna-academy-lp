@@ -1,0 +1,141 @@
+@media only screen and (min-width: 992px) {
+    /* sections tem que ter tamanho máximo limitado (feito)
+       fontes prcisam ser recalculadas (feito)
+       hero precisa ter disposição de textos e ordens realinhada (feito)
+       botoes precisam ter tamanho maximo limitado (feito)
+       verificar se titulos ficam melhores alinhados ao centro ou no start (feito)
+       colocar background repeat nas imagens de fundo das sections (feito)
+       carrosseis precisam ser eliminados ou repensados
+    */
+
+/* DESIGN SYSTEM */
+:root {
+    /* Font family */
+    --font-primary: 'Ubuntu', sans-serif;
+
+    /* Font sizes */
+    --fs-sm: 1rem; /**/
+    --fs-body: 1.125rem; /**/
+    --fs-lead: 1.5rem; /**/
+    --fs-lg: 1.75rem; /**/
+    --fs-xl: 2.375rem; /**/
+    --fs-2xl: 3.25rem;
+
+    /* Spacing */
+    --sp-0: 0.5rem; /* 6 px */
+    --sp-1: 0.75rem; /* 12 px */ 
+    --sp-2: 1rem; /* 16 px */ 
+    --sp-3: 1.25rem; /* 20 px */ 
+    --sp-4: 1.5rem; /* 24 px */ 
+    --sp-8: 2.5rem; /* 40 px */ 
+    --sp-12: 3.5rem; /* 56 px */ 
+    --sp-13: 3.75rem; /* 60 px */ 
+}
+
+/* BASE */ 
+body {
+    align-items: center; 
+}
+
+/* LAYOUT */ 
+.section {
+    max-width: 1000px;
+    row-gap: var(--sp-4);
+    padding: var(--sp-4);
+}
+
+.target, .testemonials, .offer {
+    max-width: 900px;
+}
+
+/* COMPONENTS */ 
+
+.cta {
+    max-width: 300px;
+    margin: auto;
+    padding: var(--sp-1);
+    font-size: var(--fs-body);
+}
+
+.sub-section {
+    width: 60%;
+    margin: auto;
+}
+
+/* SPECIFIC ELEMENTS */
+.hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.hero__media {
+    width: 30%;
+}
+
+.hero__product {
+    max-width: 50%;
+}
+
+.target {
+    align-items: center;
+}
+
+.target__list {
+    width: fit-content;
+}
+
+.beneficts {
+    background-size: 60%;
+}
+
+.beneficts__list {
+    width: fit-content;
+}
+
+.testemonials__testemonial {
+    max-width: calc(50% - var(--sp-1));
+}
+
+.about-author {
+    background-size: 60%;
+}
+
+.about-author__paragraph {
+    text-align: justify;
+}
+
+.about-author__slide {
+    max-width: calc(50% - var(--sp-1) + 1px);
+}
+
+.offer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./media/techno-background-desktop.webp);
+}
+
+.offer__content {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 10%;
+}
+
+
+.offer__texts {
+    justify-content: space-between;
+}
+
+.offer__product {
+    max-width: 20%;
+    margin: 0;
+}
+
+}
+
