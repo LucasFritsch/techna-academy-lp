@@ -1,27 +1,27 @@
-criarCarrossel(".about-author__track", ".about-author__slide");
-criarCarrossel(".testemonials__track", ".testemonials__testemonial")
+createCarousel(".about-author__track", ".about-author__slide");
+createCarousel(".testemonials__track", ".testemonials__testemonial")
 
-function criarCarrossel(trackSelector, slidesSelector) {
+function createCarousel(trackSelector, slidesSelector) {
     const track = document.querySelector(trackSelector);
     const slides = track.querySelectorAll(slidesSelector);
 
-    track.addEventListener("touchstart", toqueInicio);
-    track.addEventListener("touchmove", toqueMoveu);
-    track.addEventListener("touchend", toqueFim);
+    track.addEventListener("touchstart", touchBegin);
+    track.addEventListener("touchmove", touchMove);
+    track.addEventListener("touchend", touchEnd);
 
-    track.addEventListener("mousedown", toqueInicio);
-    track.addEventListener("mousemove", toqueMoveu);
-    track.addEventListener("mouseup", toqueFim);
-    track.addEventListener("mouseleave", toqueFim);
+    track.addEventListener("mousedown", touchBegin);
+    track.addEventListener("mousemove", touchMove);
+    track.addEventListener("mouseup", touchEnd);
+    track.addEventListener("mouseleave", touchEnd);
 
-    let coordenadaXInicioToque = 0;
-    let quantoOTrackerJaDeslocou = 0;
-    let deslocamentoARealizar = 0;
-    let slideAtual = 0;
-    let estaArrastando = false;
-    let comprimentoSlide;
+    let coordXTouchBegin = 0;
+    let trackerMoved = 0;
+    let pendingMove = 0;
+    let currentSlide = 0;
+    let isDragging = false;
+    let slideWidth;
 
-    function pegarClientX(event) {
+    function getClientX(event) {
     if (event.touches) {
         return event.touches[0].clientX;
     } else {
@@ -29,15 +29,15 @@ function criarCarrossel(trackSelector, slidesSelector) {
     }
     }
 
-    function toqueInicio(event){
-        coordenadaXInicioToque = pegarClientX(event);
-        estaArrastando = true;
-        atualizarComprimentoSlide();
+    function touchBegin(event){
+        coordXTouchBegin = getClientX(event);
+        isDragging = true;
+        updateSlideWidth();
 
         document.body.style.userSelect = "none";
     }
 
-    function pegarSlidesPorTela(){
+    function getSlidesOnScreen(){
         if (window.matchMedia("(min-width:992px)").matches) {
             return 2;
         }
@@ -46,48 +46,48 @@ function criarCarrossel(trackSelector, slidesSelector) {
         }
     }
 
-    function pegarIndiceMaximo() {
-        return Math.max(0, slides.length - pegarSlidesPorTela());
+    function getMaxIndex() {
+        return Math.max(0, slides.length - getSlidesOnScreen());
     }
 
-    function toqueMoveu(event){
-        if (estaArrastando == true) {
-            const coordenadaXFinalArrasto = pegarClientX(event);
-            const diferenca = coordenadaXFinalArrasto - coordenadaXInicioToque;
-            deslocamentoARealizar = quantoOTrackerJaDeslocou + diferenca;
-            track.style.transform = `translateX(${deslocamentoARealizar}px)`;
+    function touchMove(event){
+        if (isDragging == true) {
+            let coordenadaXFinalArrasto = getClientX(event);
+            let diferenca = coordenadaXFinalArrasto - coordXTouchBegin;
+            pendingMove = trackerMoved + diferenca;
+            track.style.transform = `translateX(${pendingMove}px)`;
         }
     }
 
-    function toqueFim(){
-        estaArrastando = false;
-        const quantoMoveu = deslocamentoARealizar - quantoOTrackerJaDeslocou;
+    function touchEnd(){
+        isDragging = false;
+        let movement = pendingMove - trackerMoved;
 
         // puxou o slide da direita
-        if (quantoMoveu < -50 && slideAtual < pegarIndiceMaximo()){
-            slideAtual++;
+        if (movement < -50 && currentSlide < getMaxIndex()){
+            currentSlide++;
         }
 
         // puxou o slide da esquerda
-        if (quantoMoveu > 50 && slideAtual > 0){
-            slideAtual--;
+        if (movement > 50 && currentSlide > 0){
+            currentSlide--;
         }
 
-        definirPosicaoPeloIndice();
+        setPositionByIndex();
     }
 
-    function definirPosicaoPeloIndice() {
+    function setPositionByIndex() {
         trackComputedStyle = window.getComputedStyle(track);
         trackGap = parseFloat(trackComputedStyle.columnGap);
 
-        deslocamentoARealizar = slideAtual * -(comprimentoSlide + trackGap);
-        quantoOTrackerJaDeslocou = deslocamentoARealizar;
+        pendingMove = currentSlide * -(slideWidth + trackGap);
+        trackerMoved = pendingMove;
 
-        track.style.transform = `translateX(${deslocamentoARealizar}px)`;
-        atualizarComprimentoSlide();
+        track.style.transform = `translateX(${pendingMove}px)`;
+        updateSlideWidth();
     }
 
-    function atualizarComprimentoSlide() {
-        comprimentoSlide = slides[0].offsetWidth;
+    function updateSlideWidth() {
+        slideWidth = slides[0].offsetWidth;
     }
 }
