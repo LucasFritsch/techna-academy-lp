@@ -265,9 +265,6 @@ body {
 
 .testemonials__carousel {
     overflow: hidden;
-}
-
-.testemonials__carousel {
     transition: ease 0.5s;
 }
 
@@ -300,7 +297,6 @@ body {
 
 .about-author__team {
     padding: 0 0;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     row-gap: var(--sp-4);
@@ -308,7 +304,7 @@ body {
 
 .about-author__carousel {
     padding: 0 0;
-
+    overflow: hidden;
 }
 
 .about-author__track {
