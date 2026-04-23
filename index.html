@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia prático para quem quer entrar na área de TI com manutenção e suporte. Método passo a passo, linguagem simples e checklists prontos. Acesso por R$ 67.">
     <title>Techna Academy</title>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -14,11 +15,16 @@
     <!-- End Google Tag Manager -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="desktop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="desktop.css" media="print" onload="this.media='all'">
     <script src="script.js" defer></script>
+
+    <!-- Improve SEO and / or performance -->
+    <link rel="preload" fetchpriority="high" as="image" href="media/hero-background-800px.webp" type="image/webp">
+
+
 </head>
 <body>
 
@@ -30,7 +36,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- HERO -->
-    <header class="hero section">
+    <header class="hero section" role="banner">
         <div class="hero__content">
             <h1 class="hero__title h-xl">Transforme seu conhecimento básico de T.I em uma <span class="highlight">Profissão Lucrativa</span></h1>
             <p class="paragraph">Um guia prático para quem quer <span class="highlight">entrar rápido</span> na área de TI, evitar erros comuns e começar a ganhar dinheiro com <span class="highlight">montagem e suporte.</span></p>
@@ -38,168 +44,181 @@
         <div class="hero__media">
             <img class="product-img hero__product" src="media/ebook.webp" alt="">
             <p class="short-info">Guia Prático - Passo a passo - Linguagem Simples</p>
-            <a href="https://kiwify.com.br/" class="hero__cta cta">QUERO COMEÇAR DO JEITO CERTO!</a>
+            <a href="https://kiwify.com.br/" class="hero__cta cta" aria-label="Comprar e-book na Kiwify">QUERO COMEÇAR DO JEITO CERTO!</a>
         </div>
     </header>
 
-    <!-- TARGET AUDIENCE -->
-    <section class="target section u-border">
-        <h2 class="target__title h-lg"><span class="underline">Se você...</span></h2>
-        <ul class="target__list list">
-            <li class="target__list-item list-item">Fica inseguro ao mexer em máquinas de outras pessoas</li>
-            <li class="target__list-item list-item">Não sabe exatamente por onde começar na manutenção de computadores</li>
-            <li class="target__list-item list-item">Tem medo de errar, quebrar algo e sair no prejuízo</li>
-            <li class="target__list-item list-item">Aprende por vídeos soltos, mas sente que falta um método claro</li>
-            <li class="target__list-item list-item">Não sabe como diagnosticar problemas com confiança</li>
-            <li class="target__list-item list-item">Trabalha muito quando aparece serviço, mas ganha pouco</li>
-            <li class="target__list-item list-item">Este conteúdo foi pensado exatamente para você!</li>
-        </ul>
-        <p class="target__text paragraph">O problema não é falta de capacidade. É falta de organização, método e orientação certa.</p>
-        <a href="https://kiwify.com.br/" class="target__cta cta">VEJA COMO O GUIA ORGANIZA TUDO ISSO →</a>
-    </section>
-
-    <!-- BENEFICTS -->
-    <section class="beneficts section">
-        <h2 class="beneficts__title h-lg"><span class="underline">O passo a passo claro</span> para sair da confusão e começar na TI com segurança</h2>
-        <section class="sub-section">
-            <h3 class="h-lead">Com o conteúdo do e-book, <span class="highlight">você vai:</span></h3>
-            <ul class="beneficts__list list">
-                <li class="list-item">Saber exatamente por onde começar na manutenção de computadores</li>
-                <li class="list-item">Parar de depender de vídeos soltos e dicas contraditórias</li>
-                <li class="list-item">Reduzir erros que fazem iniciantes perderem tempo e dinheiro</li>
-                <li class="list-item">Trabalhar com mais confiança e organização, mesmo no início</li>
-                <li class="list-item">Ter um método que pode ser usado tanto para renda extra quanto como profissão</li>
+    <main role="main">
+        <!-- TARGET AUDIENCE -->
+        <section class="target section u-border">
+            <h2 class="target__title h-lg"><span class="underline">Se você...</span></h2>
+            <ul class="target__list list">
+                <li class="target__list-item list-item">Fica inseguro ao mexer em máquinas de outras pessoas</li>
+                <li class="target__list-item list-item">Não sabe exatamente por onde começar na manutenção de computadores</li>
+                <li class="target__list-item list-item">Tem medo de errar, quebrar algo e sair no prejuízo</li>
+                <li class="target__list-item list-item">Aprende por vídeos soltos, mas sente que falta um método claro</li>
+                <li class="target__list-item list-item">Não sabe como diagnosticar problemas com confiança</li>
+                <li class="target__list-item list-item">Trabalha muito quando aparece serviço, mas ganha pouco</li>
+                <li class="target__list-item list-item">Este conteúdo foi pensado exatamente para você!</li>
             </ul>
+            <p class="target__text paragraph">O problema não é falta de capacidade. É falta de organização, método e orientação certa.</p>
+            <a href="https://kiwify.com.br/" class="target__cta cta" aria-label="Comprar e-book na Kiwify">VEJA COMO O GUIA ORGANIZA TUDO ISSO →</a>
         </section>
-        <section class="sub-section">
-            <h3 class="h-lead">O que você <span class="highlight">vai encontrar</span> dentro do e-book</h3>
-            <ul class="beneficts__list list">
-                <li class="list-item"><span class="underline">O caminho certo</span> para começar na manutenção de computadores</li>
-                <li class="list-item"><span class="underline">Fundamentos essenciais</span> que todo técnico iniciante precisa dominar</li>
-                <li class="list-item">Como <span class="underline">diagnosticar problemas</span> comuns sem “chutar” soluções</li>
-                <li class="list-item"><span class="underline">Boas práticas</span> para não danificar equipamentos de clientes</li>
-                <li class="list-item"><span class="underline">Checklists práticos</span> para manutenção e suporte</li>
-                <li class="list-item">Como se organizar para atender clientes com mais <span class="underline">profissionalismo</span></li>
-            </ul>
-        </section>
-        <a href="https://kiwify.com.br/" class="cta">QUERO ACESSAR ESSE PASSO A PASSO COMPLETO</a>
-    </section>
-
-    <!-- TESTEMONIALS -->
-    <section class="testemonials section u-border--translucid">
-        <h2 class="h-lg">Quem estava começando <span class="underline">como você</span>, já conseguiu sair do zero</h2>
-        <p class="h-sm">Pessoas comuns, sem experiência avançada em TI, que decidiram parar de improvisar e seguir um método claro.</p>
-        <div class="testemonials__carousel">
-            <div class="testemonials__track">
-                <article class="testemonials__testemonial">
-                    <blockquote>
-                        <p>“Não fazia idéia de como começar na manutenção. Esse ebook me ajudou a organizar tudo e parar de errar feio no básico.”</p>
-                    </blockquote>
-                    <footer>
-                        <cite>Lucas Cabral</cite>, 24 anos.
-                    </footer>
-                </article>
-                <article class="testemonials__testemonial">
-                    <blockquote>
-                        <p>“Aprendi tudo vendo vídeo solto, mas sempre ficava inseguro. O passo a passo do livro clareou muita coisa”</p>
-                    </blockquote>
-                    <footer>
-                        <cite>Raphael Angicos</cite>, 29 anos.
-                    </footer>
-                </article>
-                <article class="testemonials__testemonial">
-                    <blockquote>
-                        <p>“A linguagem é bem fácil e didática. Nota 10!”</p>
-                    </blockquote>
-                    <footer>
-                        <cite>Eliza Suzano</cite>, 22 anos.
-                    </footer>
-                </article>
-            </div>
-            <div class="carousel-navigation">
-                <button class="carousel-button" id="testemonials__previous-button"><i class="bi bi-arrow-left"></i></button>
-                <button class="carousel-button" id="testemonials__next-button"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-        <p class="paragraph">Eles não começaram sabendo mais que você. Eles apenas pararam de tentar aprender no improviso.</p>
-        <a href="https://kiwify.com.br/" class="cta">QUERO APRENDER COM ESSE MÉTODO TAMBÉM</a>
-    </section>
-
-    <!-- ABOUT-AUTHOR -->
-    <section class="about-author section">
-        <h2 class="h-lg"><span class="underline">Quem</span> está por trás desse e-book?</h2>
-        <p class="about-author__paragraph">A Techna Academy é uma iniciativa criada por profissionais da área de tecnologia que vivem, na prática, a realidade da manutenção e do suporte em informática.
-        <br>
-        O conteúdo deste ebook foi desenvolvido por uma equipe de instrutores e técnicos que já passaram exatamente pelo mesmo caminho de quem está começando hoje: confusão, excesso de informação solta e falta de um método claro.
-        <br>
-        Em vez de criar um material teórico ou acadêmico, a Techna Academy reuniu a <span class="highlight">experiência prática de vários profissionais</span> para organizar tudo em um passo a passo simples, direto e acessível para iniciantes.</p>
-        <section  class="about-author__team">
-            <h3 class="h-lg">Conheça nossa equipe técnica:</h3>
-            <section class="about-author__carousel">
-                <ul class="about-author__track">
-                    <li class="about-author__slide u-border">
-                        <img class="about-author__image" src="media/author-01-300px.webp">  
-                        <div class="about-author__content">
-                            <h4 class="underline">Carlos Mendes</h4>
-                            <p>Instrutor de Manutenção e Hardware</p>
-                        </div>
-                    </li>
-                    <li class="about-author__slide u-border">
-                        <img class="about-author__image" src="media/author-02-300px.webp">
-                        <div class="about-author__content">
-                            <h4 class="underline">Rafael Souza</h4>
-                            <p>Especialista em Suporte Técnico</p>
-                        </div>
-                    </li>
-                    <li class="about-author__slide u-border">
-                        <img class="about-author__image" src="media/author-03-300px.webp">
-                        <div class="about-author__content">
-                            <h4 class="underline">Mariana Lopes</h4>
-                            <p>Instrutora de Fundamentos de TI</p>
-                        </div>
-                    </li>
+        <!-- BENEFICTS -->
+        <section class="beneficts section">
+            <h2 class="beneficts__title h-lg"><span class="underline">O passo a passo claro</span> para sair da confusão e começar na TI com segurança</h2>
+            <section class="sub-section">
+                <h3 class="h-lead">Com o conteúdo do e-book, <span class="highlight">você vai:</span></h3>
+                <ul class="beneficts__list list">
+                    <li class="list-item">Saber exatamente por onde começar na manutenção de computadores</li>
+                    <li class="list-item">Parar de depender de vídeos soltos e dicas contraditórias</li>
+                    <li class="list-item">Reduzir erros que fazem iniciantes perderem tempo e dinheiro</li>
+                    <li class="list-item">Trabalhar com mais confiança e organização, mesmo no início</li>
+                    <li class="list-item">Ter um método que pode ser usado tanto para renda extra quanto como profissão</li>
                 </ul>
-                <div class="carousel-navigation">
-                    <button class="carousel-button" id="about-author__previous-button"><i class="bi bi-arrow-left"></i></button>
-                    <button class="carousel-button" id="about-author__next-button"><i class="bi bi-arrow-right"></i></button>
-                </div>
             </section>
+            <section class="sub-section">
+                <h3 class="h-lead">O que você <span class="highlight">vai encontrar</span> dentro do e-book</h3>
+                <ul class="beneficts__list list">
+                    <li class="list-item"><span class="underline">O caminho certo</span> para começar na manutenção de computadores</li>
+                    <li class="list-item"><span class="underline">Fundamentos essenciais</span> que todo técnico iniciante precisa dominar</li>
+                    <li class="list-item">Como <span class="underline">diagnosticar problemas</span> comuns sem “chutar” soluções</li>
+                    <li class="list-item"><span class="underline">Boas práticas</span> para não danificar equipamentos de clientes</li>
+                    <li class="list-item"><span class="underline">Checklists práticos</span> para manutenção e suporte</li>
+                    <li class="list-item">Como se organizar para atender clientes com mais <span class="underline">profissionalismo</span></li>
+                </ul>
+            </section>
+            <a href="https://kiwify.com.br/" class="cta" aria-label="Comprar e-book na Kiwify">QUERO ACESSAR ESSE PASSO A PASSO COMPLETO</a>
         </section>
-        <a href="https://kiwify.com.br/" class="cta">VER OFERTA COMPLETA</a>
-    </section>
-
-    <!-- OFFER -->
-    <section class="offer section">
-        <div class="offer__titles">
-            <h2 class="h-lg">O <span class="underline">guia prático</span> para quem quer começar na manutenção de computadores</h2>
-            <p class="paragraph">Sem teoria desnecessária. Sem confusão. Um método claro para quem está entrando na área de TI.</p>
-        </div>
-        <div class="offer__content">
-            <img class="offer__product product-img" src="media/ebook.webp" alt="">
-            <div class="offer__texts">
-                <p class="h-lead">Acesso completo por <span class="underline">apenas R$ 67</span></p>
-                <p class="short-info">Compra Segura | Acesso Imediato | 7 dias de garantia</p>
-                <a href="https://kiwify.com.br/" class="offer__cta cta">QUERO ACESSAR O EBOOK AGORA</a>
+        <!-- TESTEMONIALS -->
+        <section class="testemonials section u-border--translucid">
+            <h2 class="h-lg">Quem estava começando <span class="underline">como você</span>, já conseguiu sair do zero</h2>
+            <p class="h-sm">Pessoas comuns, sem experiência avançada em TI, que decidiram parar de improvisar e seguir um método claro.</p>
+            <div class="testemonials__carousel">
+                <div class="testemonials__track">
+                    <article class="testemonials__testemonial">
+                        <blockquote>
+                            <p>“Não fazia idéia de como começar na manutenção. Esse ebook me ajudou a organizar tudo e parar de errar feio no básico.”</p>
+                        </blockquote>
+                        <footer>
+                            <cite>Lucas Cabral</cite>, 24 anos.
+                        </footer>
+                    </article>
+                    <article class="testemonials__testemonial">
+                        <blockquote>
+                            <p>“Aprendi tudo vendo vídeo solto, mas sempre ficava inseguro. O passo a passo do livro clareou muita coisa”</p>
+                        </blockquote>
+                        <footer>
+                            <cite>Raphael Angicos</cite>, 29 anos.
+                        </footer>
+                    </article>
+                    <article class="testemonials__testemonial">
+                        <blockquote>
+                            <p>“A linguagem é bem fácil e didática. Nota 10!”</p>
+                        </blockquote>
+                        <footer>
+                            <cite>Eliza Suzano</cite>, 22 anos.
+                        </footer>
+                    </article>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-button" id="testemonials__previous-button" aria-label="Ver card anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-button" id="testemonials__next-button" aria-label="Ver próximo card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- QUESTIONS AND ANSWERS
-    <section class="section">
-        <h2 class="h-lg">Ainda está com alguma dúvida?</h2>
-        <p class="paragraph">É normal ter perguntas antes de começar algo novo. Abaixo estão algumas das dúvidas mais comuns de quem está dando os primeiros passos na área de TI.</p>
-        <ul class="u-border--translucid">
-            <li>Preciso ter algum conhecimento prévio?</li>
-            <li>Esse ebook é indicado para quem nunca trabalhou com manutenção de computadores?</li>
-            <li>Dá para aprender apenas com um ebook?</li>
-            <li>O conteúdo é mais teórico ou prático?</li>
-            <li>Esse ebook garante que vou ganhar dinheiro com TI?</li>
-        </ul>
-    </section>
-    -->
+            <p class="paragraph">Eles não começaram sabendo mais que você. Eles apenas pararam de tentar aprender no improviso.</p>
+            <a href="https://kiwify.com.br/" class="cta" aria-label="Comprar e-book na Kiwify">QUERO APRENDER COM ESSE MÉTODO TAMBÉM</a>
+        </section>
+        <!-- ABOUT-AUTHOR -->
+        <section class="about-author section">
+            <h2 class="h-lg"><span class="underline">Quem</span> está por trás desse e-book?</h2>
+            <p class="about-author__paragraph">A Techna Academy é uma iniciativa criada por profissionais da área de tecnologia que vivem, na prática, a realidade da manutenção e do suporte em informática.
+            <br>
+            O conteúdo deste ebook foi desenvolvido por uma equipe de instrutores e técnicos que já passaram exatamente pelo mesmo caminho de quem está começando hoje: confusão, excesso de informação solta e falta de um método claro.
+            <br>
+            Em vez de criar um material teórico ou acadêmico, a Techna Academy reuniu a <span class="highlight">experiência prática de vários profissionais</span> para organizar tudo em um passo a passo simples, direto e acessível para iniciantes.</p>
+            <section  class="about-author__team">
+                <h3 class="h-lg">Conheça nossa equipe técnica:</h3>
+                <section class="about-author__carousel">
+                    <ul class="about-author__track">
+                        <li class="about-author__slide u-border">
+                            <img class="about-author__image" src="media/author-01-300px.webp" alt="Carlos Mendes">
+                            <div class="about-author__content">
+                                <h4 class="underline">Carlos Mendes</h4>
+                                <p>Instrutor de Manutenção e Hardware</p>
+                            </div>
+                        </li>
+                        <li class="about-author__slide u-border">
+                            <img class="about-author__image" src="media/author-02-300px.webp" alt="Rafael Souza">
+                            <div class="about-author__content">
+                                <h4 class="underline">Rafael Souza</h4>
+                                <p>Especialista em Suporte Técnico</p>
+                            </div>
+                        </li>
+                        <li class="about-author__slide u-border">
+                            <img class="about-author__image" src="media/author-03-300px.webp" alt="Mariana Lopes">
+                            <div class="about-author__content">
+                                <h4 class="underline">Mariana Lopes</h4>
+                                <p>Instrutora de Fundamentos de TI</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="carousel-navigation">
+                        <button class="carousel-button" id="about-author__previous-button" aria-label="Ver autores anteriores">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-button" id="about-author__next-button" aria-label="Ver próximos autores">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+            </section>
+            <a href="https://kiwify.com.br/" class="cta" aria-label="Comprar e-book na Kiwify">VER OFERTA COMPLETA</a>
+        </section>
+        <!-- OFFER -->
+        <section class="offer section">
+            <div class="offer__titles">
+                <h2 class="h-lg">O <span class="underline">guia prático</span> para quem quer começar na manutenção de computadores</h2>
+                <p class="paragraph">Sem teoria desnecessária. Sem confusão. Um método claro para quem está entrando na área de TI.</p>
+            </div>
+            <div class="offer__content">
+                <img class="offer__product product-img" src="media/ebook.webp" alt="">
+                <div class="offer__texts">
+                    <p class="h-lead">Acesso completo por <span class="underline">apenas R$ 67</span></p>
+                    <p class="short-info">Compra Segura | Acesso Imediato | 7 dias de garantia</p>
+                    <a href="https://kiwify.com.br/" class="offer__cta cta" aria-label="Comprar e-book na Kiwify">QUERO ACESSAR O EBOOK AGORA</a>
+                </div>
+            </div>
+        </section>
+        <!-- QUESTIONS AND ANSWERS
+        <section class="section">
+            <h2 class="h-lg">Ainda está com alguma dúvida?</h2>
+            <p class="paragraph">É normal ter perguntas antes de começar algo novo. Abaixo estão algumas das dúvidas mais comuns de quem está dando os primeiros passos na área de TI.</p>
+            <ul class="u-border--translucid">
+                <li>Preciso ter algum conhecimento prévio?</li>
+                <li>Esse ebook é indicado para quem nunca trabalhou com manutenção de computadores?</li>
+                <li>Dá para aprender apenas com um ebook?</li>
+                <li>O conteúdo é mais teórico ou prático?</li>
+                <li>Esse ebook garante que vou ganhar dinheiro com TI?</li>
+            </ul>
+        </section>
+        -->
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer section">
+    <footer class="footer section" role="contentinfo">
         <h2 class="h-sm">Desenvolvido por <span class="underline">Lucas Fritsch</span></h2>
         <p class="paragraph">Atenção: Projeto fictício desenvolvido para fins de portfólio. Produto e empresa não são reais. Essa página contém imagens parcial ou totalmente geradas por inteligência artificial.</p>
     </footer>
