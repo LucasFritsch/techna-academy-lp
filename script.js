@@ -1,9 +1,11 @@
-createCarousel(".about-author__track", ".about-author__slide");
-createCarousel(".testemonials__track", ".testemonials__testemonial")
+createCarousel(".testemonials__track", ".testemonials__testemonial", "#testemonials__previous-button", "#testemonials__next-button");
+createCarousel(".about-author__track", ".about-author__slide", "#about-author__previous-button", "#about-author__next-button");
 
-function createCarousel(trackSelector, slidesSelector) {
+function createCarousel(trackSelector, slidesSelector, prevButtonSelector, nextButtonSelector) {
     const track = document.querySelector(trackSelector);
     const slides = track.querySelectorAll(slidesSelector);
+    const prevButton = document.querySelector(prevButtonSelector);
+    const nextButton = document.querySelector(nextButtonSelector);
 
     track.addEventListener("touchstart", touchBegin);
     track.addEventListener("touchmove", touchMove);
@@ -14,9 +16,12 @@ function createCarousel(trackSelector, slidesSelector) {
     track.addEventListener("mouseup", touchEnd);
     track.addEventListener("mouseleave", touchEnd);
 
-    let coordXTouchBegin = 0;
+    prevButton.addEventListener("click", decreaseSlide)
+    nextButton.addEventListener("click", increaseSlide)
+
+    let coordXTouchBeginning = 0;
     let trackerMoved = 0;
-    let pendingMove = 0;
+    let pendingMovement = 0;
     let currentSlide = 0;
     let isDragging = false;
     let slideWidth;
@@ -27,14 +32,6 @@ function createCarousel(trackSelector, slidesSelector) {
     } else {
         return event.clientX;
     }
-    }
-
-    function touchBegin(event){
-        coordXTouchBegin = getClientX(event);
-        isDragging = true;
-        updateSlideWidth();
-
-        document.body.style.userSelect = "none";
     }
 
     function getSlidesOnScreen(){
@@ -50,18 +47,26 @@ function createCarousel(trackSelector, slidesSelector) {
         return Math.max(0, slides.length - getSlidesOnScreen());
     }
 
+    function touchBegin(event){
+        coordXTouchBeginning = getClientX(event);
+        isDragging = true;
+        updateSlideWidth();
+
+        document.body.style.userSelect = "none";
+    }    
+
     function touchMove(event){
         if (isDragging == true) {
-            let coordenadaXFinalArrasto = getClientX(event);
-            let diferenca = coordenadaXFinalArrasto - coordXTouchBegin;
-            pendingMove = trackerMoved + diferenca;
-            track.style.transform = `translateX(${pendingMove}px)`;
+            let coordXDragEnd = getClientX(event);
+            let diff = coordXDragEnd - coordXTouchBeginning;
+            pendingMovement = trackerMoved + diff;
+            track.style.transform = `translateX(${pendingMovement}px)`;
         }
     }
 
     function touchEnd(){
         isDragging = false;
-        let movement = pendingMove - trackerMoved;
+        let movement = pendingMovement - trackerMoved;
 
         // puxou o slide da direita
         if (movement < -50 && currentSlide < getMaxIndex()){
@@ -77,17 +82,33 @@ function createCarousel(trackSelector, slidesSelector) {
     }
 
     function setPositionByIndex() {
-        trackComputedStyle = window.getComputedStyle(track);
-        trackGap = parseFloat(trackComputedStyle.columnGap);
+        const trackComputedStyle = window.getComputedStyle(track);
+        const trackGap = parseFloat(trackComputedStyle.columnGap);
 
-        pendingMove = currentSlide * -(slideWidth + trackGap);
-        trackerMoved = pendingMove;
+        pendingMovement = currentSlide * -(slideWidth + trackGap);
+        trackerMoved = pendingMovement;
 
-        track.style.transform = `translateX(${pendingMove}px)`;
+        track.style.transform = `translateX(${pendingMovement}px)`;
         updateSlideWidth();
     }
 
     function updateSlideWidth() {
         slideWidth = slides[0].offsetWidth;
+    }
+
+    function decreaseSlide() {
+        if (currentSlide > 0){
+            currentSlide--
+
+            setPositionByIndex();
+        }
+    }
+
+        function increaseSlide() {
+        if (currentSlide < getMaxIndex()){
+            currentSlide++;
+
+            setPositionByIndex();
+        }
     }
 }

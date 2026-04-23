@@ -136,6 +136,32 @@ body {
     margin: auto;
 }
 
+.carousel-navigation {
+    display: flex;
+    column-gap: var(--sp-0);
+    justify-content: space-between;
+    padding: var(--sp-1);
+    column-gap: var(--sp-4);
+}
+
+.carousel-button {
+    width: 36px;
+    height: 36px;
+    background-color: var(--background-secondary);
+    border-radius: 100%;
+    border: solid 1px var(--main);
+    color: var(--main);
+    box-shadow: var(--main) 0px 0px 1px;
+    font-size: var(--fs-body);
+    transition: ease 0.2s;
+}
+
+.carousel-button:hover {
+    transform: scale(1.1);
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+
 /* UTILITIES */
 .h-sm {
     font-size: var(--fs-sm);

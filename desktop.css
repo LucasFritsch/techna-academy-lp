@@ -62,6 +62,13 @@ body {
     margin: auto;
 }
 
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--sp-1);
+    column-gap: var(--sp-8);
+}
+
 /* SPECIFIC ELEMENTS */
 .hero {
     flex-direction: row;
