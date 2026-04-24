@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+    src: url('fonts/Ubuntu/Ubuntu-Regular.ttf') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'Ubuntu';
-    src: url('fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    src: url('fonts/Ubuntu/Ubuntu-Bold.ttf') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
