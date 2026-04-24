@@ -40,7 +40,7 @@ body {
 /* LAYOUT */ 
 .section {
     max-width: 1000px;
-    row-gap: var(--sp-4);
+    row-gap: var(--sp-8);
     padding: var(--sp-4);
 }
 
@@ -125,6 +125,7 @@ body {
 
 .offer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./media/techno-background-desktop.webp);
+    background-position: center;
 }
 
 .offer__content {
@@ -141,7 +142,8 @@ body {
 }
 
 .offer__product {
-    max-width: 20%;
+    width: 200px;
+    height: 300px;
     margin: 0;
 }
 

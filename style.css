@@ -82,6 +82,13 @@ body {
     row-gap: var(--sp-13);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sp-13);
+    align-items: center;
+}
+
 button {
     background-color: none;
 }
@@ -122,6 +129,12 @@ body {
 
 .paragraph {
     font-size: var(--fs-body);
+}
+
+.titles-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sp-1);
 }
 
 .list {
