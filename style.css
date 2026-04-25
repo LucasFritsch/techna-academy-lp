@@ -390,6 +390,12 @@ body {
     padding: var(--sp-0);
 }
 
+.guarantee__content {
+    padding: var(--sp-1);
+    background-color: var(--background-secondary);
+    border-radius: 10px;
+}
+
 .offer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./media/techno-background-mobile.webp);
     background-size: cover;
