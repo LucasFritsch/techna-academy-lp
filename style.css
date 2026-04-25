@@ -28,7 +28,7 @@
 /* DESIGN SYSTEM */
 :root {
     /* Font family */
-    --font-primary: 'Ubuntu', Arial, sans-serif;
+    --font-primary: 'Ubuntu', 'Segoe UI', sans-serif;
 
     /* Font sizes */
     --fs-sm: 0.875rem;
