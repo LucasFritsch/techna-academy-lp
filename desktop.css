@@ -51,15 +51,16 @@ body {
 /* COMPONENTS */ 
 
 .cta {
-    max-width: 300px;
+    max-width: 350px;
     margin: auto;
     padding: var(--sp-1);
     font-size: var(--fs-body);
 }
 
 .sub-section {
-    width: 60%;
     margin: auto;
+    align-items: center;
+    max-width: 80%;
 }
 
 .carousel-navigation {
@@ -104,7 +105,7 @@ body {
 }
 
 .beneficts__list {
-    width: fit-content;
+    max-width: 100%;
 }
 
 .testemonials__testemonial {
@@ -145,6 +146,11 @@ body {
     width: 200px;
     height: 300px;
     margin: 0;
+}
+
+.footer {
+    row-gap: var(--sp-2);
+
 }
 
 }

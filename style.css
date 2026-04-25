@@ -120,6 +120,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: var(--sp-2);
+    align-items: center;
 }
 
 /* COMPONENTS */
@@ -153,7 +154,6 @@ body {
 .cta {
     background-image: var(--h-gradient);
     font-size: var(--fs-body);
-    box-shadow: 0px 0px 3px var(--accent);
     border: solid 1px var(--accent);
     color: var(--accent);
     padding: var(--sp-1) var(--sp-0);
@@ -184,10 +184,10 @@ body {
 }
 
 .carousel-button {
-    width: 36px;
+    width: 60px;
     height: 36px;
     background-color: var(--background-secondary);
-    border-radius: 100%;
+    border-radius: 10px;
     border: solid 1px var(--main);
     color: var(--main);
     box-shadow: var(--main) 0px 0px 1px;
@@ -415,4 +415,5 @@ body {
 
 .footer {
     margin-bottom: var(--sp-8);
+    row-gap: var(--sp-2);
 }
