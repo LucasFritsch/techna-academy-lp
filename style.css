@@ -34,8 +34,8 @@
     --fs-sm: 0.875rem;
     --fs-body: 1rem;
     --fs-lead: 1.25rem;
-    --fs-lg: 1.75rem;
-    --fs-xl: 2.375rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 2rem;
     --fs-2xl: 3.25rem;
 
     /* Font weights */
@@ -52,7 +52,7 @@
     --accent60: rgba(228, 237, 54, 0.60);
     --texts: #ECF5F8;
     --background-01: #000000;
-    --background-02: #03070a;
+    --background-02: #0a1d2b;
     --background-03: #00203b;
     --h-gradient: linear-gradient(to right, #070D11, #002240);
 
@@ -105,16 +105,20 @@ a {
     text-decoration: none;
 }
 
+p {
+    line-height: 1.4rem;
+}
+
 /* LAYOUT */
 body {
     padding: var(--sp-1) var(--sp-4);
 }
 
 .section {
-    padding: var(--sp-1) var(--sp-3);
+    padding: var(--sp-2) var(--sp-3);
     display: flex;
     flex-direction: column;
-    row-gap: var(--sp-4);
+    row-gap: var(--sp-8);
     width: 100%;
 }
 
@@ -147,7 +151,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: var(--sp-0);
-
+    line-height: 1.5rem;
 }
 
 .list-item {
@@ -192,13 +196,13 @@ body {
 
 .carousel-button {
     width: 60px;
-    height: 36px;
+    height: 48px;
     background-color: var(--background-02);
     border-radius: 10px;
     border: solid 1px var(--main);
     color: var(--main);
     box-shadow: var(--main) 0px 0px 1px;
-    font-size: var(--fs-body);
+    font-size: var(--fs-lg);
     transition: ease 0.2s;
 }
 
@@ -332,7 +336,7 @@ body {
     text-align: start;
     background-color: var(--background-03);
     border: solid 1px var(--main-translucid);
-    padding: var(--sp-1);
+    padding: var(--sp-2);
     border-radius: 20px 20px 20px 0;
     font-size: var(--fs-sm);
 }
@@ -377,10 +381,11 @@ body {
     flex-shrink: 0;
 
     width: 120px;
-    aspect-ratio: 1 / 1;
+    min-height: 100%;
+
 
     object-fit: cover;
-    object-position: 100% 40%;
+    object-position: 50% 50%;
 
     border-radius: 10px 0px 0px 50px;
     -webkit-user-drag: none;
@@ -393,13 +398,7 @@ body {
     flex-direction: column;
     gap: 0.4rem;
     text-align: start;
-    padding: var(--sp-0);
-}
-
-.guarantee__content {
     padding: var(--sp-1);
-    background-color: var(--background-02);
-    border-radius: 10px;
 }
 
 .offer {
@@ -417,6 +416,12 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: var(--sp-3);
+    font-weight: bold;
+}
+
+.offer__guarantee {
+    padding: var(--sp-1);
+    background-color: var(--main20);
 }
 
 .footer {
