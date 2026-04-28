@@ -44,13 +44,16 @@
 
     /* Color pallete */
     --main: #1e94fc;
+    --main10: rgba(30, 148, 252, 0.10);
+    --main20: rgba(30, 148, 252, 0.20);
     --main-translucid: #1e94fc99;
     --secondary: #452E7E;
     --accent: #E4ED36;
+    --accent60: rgba(228, 237, 54, 0.60);
     --texts: #ECF5F8;
-    --background: #000000;
-    --background-secondary: #070D11;
-    --v-gradient: linear-gradient(to bottom, #070D11, #002240);
+    --background-01: #000000;
+    --background-02: #03070a;
+    --background-03: #00203b;
     --h-gradient: linear-gradient(to right, #070D11, #002240);
 
     /* Spacing */
@@ -76,7 +79,7 @@
 body {
     font-family: var(--font-primary);
     color: var(--texts);
-    background-color: #000000;
+    background-color: var(--background-01);
     display: flex;
     flex-direction: column;
     row-gap: var(--sp-13);
@@ -152,21 +155,25 @@ body {
 }
 
 .cta {
-    background-image: var(--h-gradient);
+    background-color: var(--background-02);
     font-size: var(--fs-body);
-    border: solid 1px var(--accent);
-    color: var(--accent);
+    color: var(--texts);
     padding: var(--sp-1) var(--sp-0);
     font-weight: var(--fw-bold);
     border-radius: 15px;
     font-family: var(--font-primary);
     transition: 0.3s ease;
+
+    border: solid 1px var(--main);
+    background-image: linear-gradient( to right, var(--background-03), var(--background-01));
 }
 
 .cta:hover {
     transform: scale(1.1);
+    color: var(--main);
     cursor: pointer;
-    box-shadow: 0px 0px 4px var(--accent);
+    border: solid 3px var(--main);
+    background-color: var(--background-02);
 }
 
 .product-img {
@@ -186,7 +193,7 @@ body {
 .carousel-button {
     width: 60px;
     height: 36px;
-    background-color: var(--background-secondary);
+    background-color: var(--background-02);
     border-radius: 10px;
     border: solid 1px var(--main);
     color: var(--main);
@@ -232,12 +239,10 @@ body {
 
 .u-border {
     border: solid var(--main) 1px;
-    box-shadow: var(--main) 0px 0px 3px;
 }
 
 .u-border--translucid {
     border: solid var(--main-translucid) 1px;
-    box-shadow: var(--main) 0px 0px 3px;
 }
 
 
@@ -255,7 +260,7 @@ body {
 }
 
 .target {
-    background-image: var(--v-gradient);
+    background-color: var(--background-02);
 }
 
 .target__text {
@@ -301,7 +306,7 @@ body {
 }
 
 .testemonials {
-    background-color: var(--background-secondary);
+    background-color: var(--background-02);
 }
 
 .testemonials__carousel {
@@ -323,8 +328,9 @@ body {
     flex-shrink: 0;
     width: 100%;
     column-gap: var(--sp-1);
+    row-gap: var(--sp-1);
     text-align: start;
-    background-image: var(--v-gradient);
+    background-color: var(--background-03);
     border: solid 1px var(--main-translucid);
     padding: var(--sp-1);
     border-radius: 20px 20px 20px 0;
@@ -363,7 +369,7 @@ body {
     width: 100%;
     max-width: 520px;
 
-    background-color: var(--background-secondary);
+    background-color: var(--background-02);
     border-radius: 10px 10px 10px 50px;
 }
 
@@ -392,7 +398,7 @@ body {
 
 .guarantee__content {
     padding: var(--sp-1);
-    background-color: var(--background-secondary);
+    background-color: var(--background-02);
     border-radius: 10px;
 }
 
