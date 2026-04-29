@@ -1,4 +1,4 @@
-createCarousel(".testemonials__track", ".testemonials__testemonial", "#testemonials__previous-button", "#testemonials__next-button");
+createCarousel(".testimonials__track", ".testimonials__card", "#testimonials__previous-button", "#testimonials__next-button");
 createCarousel(".about-author__track", ".about-author__slide", "#about-author__previous-button", "#about-author__next-button");
 
 function createCarousel(trackSelector, slidesSelector, prevButtonSelector, nextButtonSelector) {

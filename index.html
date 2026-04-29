@@ -106,47 +106,53 @@
             <a href="https://kiwify.com.br/" class="cta" aria-label="Comprar e-book na Kiwify">QUERO ACESSAR O MÉTODO E OS CHECKLISTS</a>
         </section>
 
-        <!-- TESTEMONIALS -->
-        <section class="testemonials section ">
-            <div class="testemonials__titles titles-box">
+        <!-- testimonials -->
+        <section class="testimonials section ">
+            <div class="testimonials__titles titles-box">
                 <h2 class="h-lg">Quem estava começando <span class="underline">como você</span>, já conseguiu sair do <span class="highlight">zero com mais segurança</span></h2>
                 <p class="h-sm">Pessoas comuns, sem experiência avançada, que deixaram o improviso de lado e começaram a agir com mais clareza e confiança.</p>
             </div>
-            <div class="testemonials__carousel">
-                <div class="testemonials__track">
-                    <article class="testemonials__testemonial">
+            <div class="testimonials__carousel">
+                <div class="testimonials__track">
+                    <article class="testimonials__card">
                         <blockquote>
                             <p>"Eu recusava serviço com medo de estragar o computador do cliente e ter que pagar o conserto. Com o guia, fiz meu primeiro atendimento pago em <span class="highlight">menos de duas semanas</span> — uma formatação por R$80. Parecia simples, mas foi a prova que eu precisava pra saber que consigo."</p>
                         </blockquote>
-                        <footer>
-                            <cite>- Lucas Cabral</cite>, 24 anos.
+                        <footer class="testimonials__author">
+                            <img class="testimonials__avatar" src="media/testimonial-01-200px.webp" alt="">
+                            <div class="testimonials__divider"></div>
+                            <span>Lucas Cabral, 24 anos.</span>
                         </footer>
                     </article>
-                    <article class="testemonials__testemonial">
+                    <article class="testimonials__card">
                         <blockquote>
                             <p>"Passei meses vendo vídeo no YouTube achando que estava aprendendo. Na hora de resolver um problema de verdade, travava. O guia me deu um caminho que eu sigo do início ao fim — sem ficar abrindo 10 abas pra tentar adivinhar o que fazer. Hoje já atendi 4 clientes e estou montando minha carteira aos poucos."</p>
                         </blockquote>
-                        <footer>
-                            <cite>- Raphael Angicos</cite>, 29 anos.
+                        <footer class="testimonials__author">
+                            <img class="testimonials__avatar" src="media/testimonial-02-200px.webp" alt="">
+                            <div class="testimonials__divider"></div>
+                            <span>Raphael Angicos, 29 anos.</span>
                         </footer>
                     </article>
-                    <article class="testemonials__testemonial">
+                    <article class="testimonials__card">
                         <blockquote>
-                            <p>“O que mudou pra mim foi a confiança. Antes eu até sabia algumas coisas, mas não tinha coragem de cobrar. Hoje já consigo <span class="highlight">pegar pequenos serviços sem travar</span>.”</p>
+                            <p>"Eu sabia mais do que imaginava — o problema era acreditar nisso. Ficava me comparando com profissional de 10 anos e aí não cobrava nada, com medo de 'não merecer'. O guia me deu estrutura, e a estrutura me deu coragem. <span class="highlight">Já atendi 5 clientes e nunca mais trabalhei de graça.</span>"</p>
                         </blockquote>
-                        <footer>
-                            <cite>- Eliza Suzano</cite>, 22 anos.
+                        <footer class="testimonials__author">
+                            <img class="testimonials__avatar" src="media/testimonial-03-200px.webp" alt="">
+                            <div class="testimonials__divider"></div>
+                            <span>Eliza Suzano, 22 anos.</span>
                         </footer>
                     </article>
                 </div>
                 <div class="carousel-navigation">
-                    <button class="carousel-button" id="testemonials__previous-button" aria-label="Ver card anterior">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <button class="carousel-button" id="testimonials__previous-button" aria-label="Ver card anterior">
+                        <svg class="carousel-navigation__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                         </svg>
                     </button>
-                    <button class="carousel-button" id="testemonials__next-button" aria-label="Ver próximo card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <button class="carousel-button" id="testimonials__next-button" aria-label="Ver próximo card">
+                        <svg class="carousel-navigation__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                         </svg>
                     </button>
@@ -191,12 +197,12 @@
                     </ul>
                     <div class="carousel-navigation">
                         <button class="carousel-button" id="about-author__previous-button" aria-label="Ver autores anteriores">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <svg class="carousel-navigation__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                             </svg>
                         </button>
                         <button class="carousel-button" id="about-author__next-button" aria-label="Ver próximos autores">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <svg class="carousel-navigation__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                             </svg>
                         </button>

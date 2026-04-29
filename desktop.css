@@ -44,7 +44,7 @@ body {
     padding: var(--sp-4);
 }
 
-.target, .testemonials, .offer {
+.target, .testimonials, .offer {
     max-width: 900px;
 }
 
@@ -108,7 +108,7 @@ body {
     max-width: 100%;
 }
 
-.testemonials__testemonial {
+.testimonials__card {
     max-width: calc(50% - var(--sp-1));
 }
 
