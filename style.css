@@ -168,7 +168,7 @@ body {
     font-family: var(--font-primary);
     transition: 0.3s ease;
 
-    border: solid 1px var(--main);
+    border: solid 1px var(--accent);
     background-image: linear-gradient( to right, var(--background-03), var(--background-01));
 }
 
