@@ -127,10 +127,12 @@ body {
 .offer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./media/techno-background-desktop.webp);
     background-position: center;
+    flex-direction: column;
 }
 
 .offer__content {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: center;
