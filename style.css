@@ -52,7 +52,7 @@
     --accent60: rgba(228, 237, 54, 0.60);
     --texts: #ECF5F8;
     --background-01: #000000;
-    --background-02: #0a1d2b;
+    --background-02: #051018;
     --background-03: #00203b;
     --h-gradient: linear-gradient(to right, #070D11, #002240);
 
@@ -111,14 +111,14 @@ p {
 
 /* LAYOUT */
 body {
-    padding: var(--sp-1) var(--sp-4);
+    padding: var(--sp-1) var(--sp-2);
 }
 
 .section {
     padding: var(--sp-2) var(--sp-3);
     display: flex;
     flex-direction: column;
-    row-gap: var(--sp-8);
+    row-gap: var(--sp-4);
     width: 100%;
 }
 
@@ -159,17 +159,17 @@ body {
 }
 
 .cta {
-    background-color: var(--background-02);
+    background-color: var(--accent);
     font-size: var(--fs-body);
-    color: var(--texts);
+    color: var(--background-01);
     padding: var(--sp-1) var(--sp-0);
     font-weight: var(--fw-bold);
     border-radius: 15px;
     font-family: var(--font-primary);
     transition: 0.3s ease;
+    box-shadow:0px 0px 30px 3px var(--accent60);
 
     border: solid 1px var(--accent);
-    background-image: linear-gradient( to right, var(--background-03), var(--background-01));
 }
 
 .cta:hover {
@@ -178,6 +178,7 @@ body {
     cursor: pointer;
     border: solid 3px var(--main);
     background-color: var(--background-02);
+    box-shadow:0px 0px 0px 0px var(--main);
 }
 
 .product-img {
@@ -195,13 +196,12 @@ body {
 }
 
 .carousel-button {
-    width: 60px;
-    height: 48px;
-    background-color: var(--background-02);
-    border-radius: 10px;
-    border: solid 1px var(--main);
-    color: var(--main);
-    box-shadow: var(--main) 0px 0px 1px;
+    width: 48px;
+    height: 36px;
+    background-color: var(--background-01);
+    border-radius: 5px;
+    border: solid 2px var(--accent);
+    color: var(--accent);
     transition: ease 0.2s;
 }
 
@@ -212,8 +212,8 @@ body {
 }
 
 .carousel-navigation__icon {
-   width: var(--fs-lead);
-   height: var(--fs-lead);
+   width: var(--fs-lg);
+   height: var(--fs-lg);
 }
 
 /* UTILITIES */
@@ -314,7 +314,7 @@ body {
 }
 
 .testimonials {
-    background-color: var(--background-02);
+   
 }
 
 .testimonials__carousel {
@@ -338,8 +338,8 @@ body {
     column-gap: var(--sp-1);
     row-gap: var(--sp-1);
     text-align: start;
-    background-color: var(--background-03);
-    border: solid 1px var(--main-translucid);
+    background-color: var(--background-02);
+    border: solid 2px var(--main-translucid);
     padding: var(--sp-2);
     border-radius: 20px 20px 20px 0;
     font-size: var(--fs-sm);
@@ -352,16 +352,16 @@ body {
 }
 
 .testimonials__avatar {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px 0px 10px 0px;
-    border: solid 1px var(--main-translucid);
+    border: solid 2px var(--accent60);
 }
 
 .testimonials__divider {
-    height: 50%;
-    width: 3px;
-    background-color: var(--main);
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-translucid);
     border-radius: 10px;
 }
 
@@ -445,7 +445,7 @@ body {
 
 .offer__guarantee {
     padding: var(--sp-1);
-    background-color: var(--main20);
+    background-color: var(--background-02);
 }
 
 .footer {
