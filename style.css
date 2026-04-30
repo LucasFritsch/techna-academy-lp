@@ -254,6 +254,7 @@ body {
 }
 
 
+
 /* SPECIFIC ELEMENTS */
 .hero {
     min-height: 100vh;
@@ -309,12 +310,13 @@ body {
 }
 
 .beneficts {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./media/grid-background.webp);
-    background-size: cover;
-}
-
-.testimonials {
-   
+    background-size: 70px 70px;
+    background-position: 50% 50%;
+    background-image:
+    linear-gradient(to right, var(--main10) 4px, transparent 1px),
+    linear-gradient(to bottom, var(--main10) 4px, transparent 1px);
+    border-radius: 0;
+    box-shadow: inset 0px 0px 50px 30px var(--background-01);
 }
 
 .testimonials__carousel {
@@ -366,8 +368,13 @@ body {
 }
 
 .about-author {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./media/grid-background.webp);
-    background-size: cover;
+    background-size: 70px 70px;
+    background-position: 50% 50%;
+    background-image:
+    linear-gradient(to right, var(--main10) 4px, transparent 1px),
+    linear-gradient(to bottom, var(--main10) 4px, transparent 1px);
+    border-radius: 0;
+    box-shadow: inset 0px 0px 50px 30px var(--background-01);
 }
 
 .about-author__team {

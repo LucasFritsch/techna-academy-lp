@@ -101,7 +101,7 @@ body {
 }
 
 .beneficts {
-    background-size: 60%;
+    background-size: 100px 100px;
 }
 
 .beneficts__list {
@@ -113,7 +113,7 @@ body {
 }
 
 .about-author {
-    background-size: 60%;
+    background-size: 100px 100px;
 }
 
 .about-author__paragraph {
